@@ -10,10 +10,11 @@ export USER="vnc"
 /bin/echo "Setting password $passwd"
 
 /bin/echo $passwd | /usr/bin/tightvncpasswd -f > ~/.vnc/passwd
+/bin/echo "startfluxbox &" >> ~/.vnc/xstartup
+/bin/echo "xfce4-terminal &" >> ~/.vnc/xstartup
 
-/bin/echo "xterm &" > ~/.vnc/xstartup
 /bin/echo "qbittorrent &" >> ~/.vnc/xstartup
-/bin/echo "/usr/bin/ratpoison &" >> ~/.vnc/xstartup
+#/bin/echo "/usr/bin/ratpoison &" >> ~/.vnc/xstartup
 
 /bin/chmod +x ~/.vnc/xstartup
 /bin/chmod 600 ~/.vnc/passwd
